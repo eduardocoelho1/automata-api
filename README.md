@@ -20,8 +20,8 @@ A documentação da API pode ser encontrada em http://127.0.0.1:8000/docs.
 No diretório `/examples` existe um exemplo para cada tipo de autômato.
 
 - `dfa.json` representa um DFA que aceita palavras formadas por 0's e 1's terminadas em um número ímpar de 1's
-- `dpda.json` representa um DPDA que aceita palavras da linguagem $L = \{a^ib^i \mid i > 0\}$
-- `dtm.json` representa uma DTM que aceita palavras da linguagem $L = \{a^ib^i \mid i > 0\}$
+- `dpda.json` representa um DPDA que aceita palavras da linguagem $L = \\{a^ib^i \mid i > 0\\}$
+- `dtm.json` representa uma DTM que aceita palavras da linguagem $L = \\{a^ib^i \mid i > 0\\}$
 
 ## Testes
 ### Testando entradas para o autômato gerado por `dfa.json`:
