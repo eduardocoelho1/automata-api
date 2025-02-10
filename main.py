@@ -1,9 +1,11 @@
 from fastapi import FastAPI
-from routes import nfa
+from routes import dfa, npda, mntm
 
 app = FastAPI()
 
-app.include_router(nfa.router, prefix="/nfa")
+app.include_router(dfa.router, prefix="/dfa")
+app.include_router(npda.router, prefix="/npda")
+app.include_router(mntm.router, prefix="/mntm")
 
 @app.get("/")
 def home():
