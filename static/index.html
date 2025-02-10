@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submit JSON</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+    <h2>Enter Automaton JSON</h2>
+    <textarea id="jsonInput" rows="6" cols="50"></textarea>
+    <div class="button">
+        <button onclick="sendJSON('dfa')">Create DFA</button>
+        <button onclick="sendJSON('npda')">Create NPDA</button>
+        <button onclick="sendJSON('mntm')">Create MNTM</button>
+    </div>
+
+    <div class="button">
+        <a href="dfa.html">Show DFA</a>
+        <a href="npda.html">Show NPDA</a>
+        <a href="mntm.html">Show MNTM</a>
+    </div>
+
+    <h3>Response:</h3>
+    <pre id="response"></pre>
+    <script src="/static/js/index.js"></script>
+</body>
+</html>

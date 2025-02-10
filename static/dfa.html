@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show DFA</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body onload="fetchData('dfa')">
+    <h1>Deterministic Finite Automaton (DFA)</h1>
+
+    <div>
+        <img src="http://127.0.0.1:8000/dfa/diagram" alt="DFA Diagram">
+    </div>
+
+    <div class="container">
+        <div class="inner">
+            <h2>DFA Information:</h2>
+            <pre id="dfa-data">Loading...</pre>
+        </div>
+        <div class="inner">
+            <h2>Check word</h2>
+            <input type="text" id="input" placeholder="Enter word">
+            <button onclick="checkWord('dfa')">Check</button>
+            <h3>Result:</h3>
+            <pre id="result"> </pre>
+
+            <div class="back">
+                <a href="/static/index.html">Back</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
