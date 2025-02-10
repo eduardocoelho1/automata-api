@@ -1,39 +1,22 @@
 from fastapi import APIRouter
-from fastapi.responses import FileResponse
-from automata.tm.mntm import MNTM
 from models.mntm import MNTMData
-
-stored_item: MNTM = None
-stored_item_data: MNTMData = None
+import automata_handler
 
 router = APIRouter()
 
+@router.get("/")
+def get_data():
+    return automata_handler.get_data("mntm")
+
 @router.post("/")
-def create_item(item: MNTMData):
-    global stored_item, stored_item_data
-    try:
-        stored_item_data = item
-        stored_item = item.to_mntm()
-        stored_item.validate()
-        return {"message": "Item created successfully", "item": item}
-    except Exception as e:
-        stored_item_data = None
-        stored_item = None
-        return {"message": str(e)}
+def create_automaton(data: MNTMData):
+    return automata_handler.create_automaton("mntm", data)
 
 @router.get("/diagram")
-def read_item():
-    try:
-        stored_item.show_diagram().draw("diagrams/mntm.png", format="png")
-        return FileResponse("diagrams/mntm.png")
-    except AttributeError:
-        return {"message": "Automaton does not exist"}
+def get_diagram():
+    return automata_handler.get_diagram("mntm")
     
 @router.get("/accept/{word}")
-def read_item(word: str):
-    try:
-        accepted: bool = stored_item.accepts_input(word)
-        return {"word": word, "status": "accepted" if accepted else "rejected"}
-    except AttributeError:
-        return {"message": "Automaton does not exist"}
+def check_word(word: str):
+    return automata_handler.check_word("mntm", word)
 
