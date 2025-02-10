@@ -2,25 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Show DFA</title>
+    <title>Show DPDA</title>
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
-<body onload="fetchData('npda')">
-    <h1>Non-deterministic Pushdown Automaton (NPDA)</h1>
+<body onload="fetchData('dpda')">
+    <h1>Deterministic Pushdown Automaton (DPDA)</h1>
 
     <div>
-        <img src="http://127.0.0.1:8000/npda/diagram" alt="NPDA Diagram">
+        <img src="http://127.0.0.1:8000/dpda/diagram" alt="DPDA Diagram">
     </div>
 
     <div class="container">
         <div class="inner">
-            <h2>NPDA Information:</h2>
+            <h2>DPDA Information:</h2>
             <pre id="dfa-data">Loading...</pre>
         </div>
         <div class="inner">
             <h2>Check word</h2>
             <input type="text" id="input" placeholder="Enter word">
-            <button onclick="checkWord('npda')">Check</button>
+            <button onclick="checkWord('dpda')">Check</button>
             <h3>Result:</h3>
             <pre id="result"> </pre>
 

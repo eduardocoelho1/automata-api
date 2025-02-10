@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Show MNTM</title>
+    <title>Show DTM</title>
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
-<body onload="fetchData('mntm')">
-    <h1>Multitape Non-deterministic Turing Machine (MNTM)</h1>
+<body onload="fetchData('dtm')">
+    <h1>Deterministic Turing Machine (DTM)</h1>
 
     <div class="container">
         <div class="inner">
-            <h2>MNTM Information:</h2>
+            <h2>DTM Information:</h2>
             <pre id="dfa-data">Loading...</pre>
         </div>
         <div class="inner">
             <h2>Check word</h2>
             <input type="text" id="input" placeholder="Enter word">
-            <button onclick="checkWord('mntm')">Check</button>
+            <button onclick="checkWord('dtm')">Check</button>
             <h3>Result:</h3>
             <pre id="result"> </pre>
 

@@ -10,9 +10,8 @@ async function fetchData(type) {
 
 async function checkWord(type) {
     let word = document.getElementById("input").value;
-    if (!word) return;
     try {
-        let response = await fetch(`http://127.0.0.1:8000/${type}/accept/${word}`);
+        let response = await fetch(`http://127.0.0.1:8000/${type}/accept?word=${encodeURIComponent(word)}`);
         let result = await response.json();
         document.getElementById("result").innerText = result["status"];
     } catch (error) {
