@@ -1,6 +1,12 @@
 # Trabalho Prático: Construção de uma API REST Utilizando a Biblioteca Automata
 Este projeto permite criar, ver informações, visualizar e verificar a aceitação de palavras em três tipos de autômatos: DFA (Deterministic Finite Automaton), DPDA (Deterministic Pushdown Automaton) e DTM (Deterministic Turing Machine). 
 
+## Baixar projeto
+Execute o comando a seguir:
+```
+git clone git@github.com:eduardocoelho1/automata-api.git
+```
+
 ## Configuração do ambiente
 - Crie um ambiente virtual.
 - Instale as dependências a seguir:
